@@ -8,19 +8,49 @@
   </head>
   <body>
     <div class="container">
-      <h3>Viva Auto-Comment</h3>
-      <label>
-        <input type="checkbox" id="enabled" />
-        Enable Auto-Comment
-      </label>
+      <!-- Header -->
+      <div class="header">
+        <h1>🚀 Viva Auto-Comment</h1>
+        <p>Automatically reply to Viva Engage posts</p>
+      </div>
 
-      <label>
-        <div>Message:</div>
-        <textarea id="message" rows="4"></textarea>
-      </label>
+      <!-- Main Card -->
+      <div class="card">
+        <!-- Toggle Section -->
+        <div class="toggle-section">
+          <span class="toggle-label">Enable Auto-Comment</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="enabled" />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
 
-      <button id="save">Save</button>
-      <div id="status" class="status"></div>
+        <!-- Custom Message Section -->
+        <div class="message-section">
+          <label for="message">Custom Comment Message</label>
+          <textarea id="message" rows="3" placeholder="Enter your auto-reply message..."></textarea>
+          <div class="char-count"><span id="charCount">0</span> characters</div>
+        </div>
+
+        <!-- Quick Presets -->
+        <div class="presets-section">
+          <label>Quick Presets</label>
+          <div class="preset-chips">
+            <button class="preset-chip" data-message="m">m</button>
+            <button class="preset-chip" data-message="👍">👍</button>
+            <button class="preset-chip" data-message="Noted">Noted</button>
+            <button class="preset-chip" data-message="Thanks!">Thanks!</button>
+            <button class="preset-chip" data-message="On it!">On it!</button>
+          </div>
+        </div>
+
+        <!-- Save Button -->
+        <button id="save" class="save-btn">💾 Save Settings</button>
+        <div id="status" class="status">✓ Settings saved successfully!</div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">Viva Engage Auto-Comment Extension</div>
     </div>
     <script src="popup.js"></script>
   </body>
