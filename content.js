@@ -442,7 +442,7 @@ async function autoCommentOnPost(postEl) {
 
     commentButton.click()
 
-    await new Promise((r) => setTimeout(r, 1000))
+    await new Promise((r) => setTimeout(r, 400))
 
     // Find comment input
 
@@ -459,7 +459,7 @@ async function autoCommentOnPost(postEl) {
 
     setInputValueAndTrigger(textarea, settings.message)
 
-    await new Promise((r) => setTimeout(r, 800))
+    await new Promise((r) => setTimeout(r, 200))
 
     // Submit comment
 
@@ -514,7 +514,7 @@ async function processWithDebounce(postEl) {
     await autoCommentOnPost(postEl)
 
     processingQueue.delete(postId)
-  }, 1500) // Wait 1.5 seconds before processing
+  }, 100) // Wait 1.5 seconds before processing
 
   processingQueue.set(postId, timeoutId)
 }
